@@ -135,10 +135,10 @@ function submitQuiz() {
         loadQuiz();
     } else {
         if (score >= 14) {
-            quiz.innerHTML = `Félicitations ! Vous avez terminé cette formation avec une score de ${score}/18 (plusieurs points possibles par question). <br> Nous vous remercions pour votre engagement et votre participation. <br> <br>`;
+            quiz.innerHTML = `Félicitations ! Vous avez terminé cette formation avec une score de ${score.toFixed(2)}/18 (plusieurs points possibles par question). <br> Nous vous remercions pour votre engagement et votre participation. <br> <br>`;
 document.getElementById('finish').style.display = 'block';
         } else {
-            quiz.innerHTML = ` Vous avez obtenu ${score} points (plusieurs points possibles par question). <br> Un score de minimum 14/18 est requis pour réussir cette formation. <br> Veuillez recommencer le questionnaire. <br>`;
+            quiz.innerHTML = ` Vous avez obtenu ${score.toFixed(2)} points (plusieurs points possibles par question). <br> Un score de minimum 14/18 est requis pour réussir cette formation. <br> Veuillez recommencer le questionnaire. <br>`;
             document.getElementById('retry-btn').style.display = 'block';
         }
         submitBtn.style.display = 'none';
